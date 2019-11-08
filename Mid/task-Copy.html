@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <title>Canvas tutorial</title>
+      <script type="text/javascript">
+      function draw(){
+        var canvas = document.getElementById('tutorial');
+          
+          if(canvas.getContext){
+              var ctx=canvas.getContext('2d');
+
+              
+                 //left
+              for(var i=50;i<=110;){
+                  for(var j=110;j>=10;){
+              ctx.fillStyle='rgb(71, 135, 55)';
+              ctx.fillRect(i,j,15,15);
+              i=i+2;
+              j=j-2;
+               }
+               }
+
+                    //matra
+              ctx.fillStyle='rgb(99, 91, 28)';
+              ctx.fillRect(50,10,260,15);
+                //middle1
+               for(var i=50;i<=110;){
+                  for(var j=120;j<=170;){
+              ctx.fillStyle='rgb(59, 115, 99)';
+              ctx.fillRect(i,j,15,15);
+              i=i+2;
+              j=j+1;
+               }
+               } 
+              
+               //middle2
+               for(var i=80;i<=100;){
+                  for(var j=250;j>=180;){
+              ctx.fillStyle='rgb(101, 81, 115)';
+              ctx.fillRect(i,j,15,15);
+              i=i+2;
+              j=j-2;
+               }
+               }
+
+               ctx.fillStyle='rgb(87, 177, 189)';
+              ctx.fillRect(150,170,15,23);
+
+               ctx.fillStyle='rgb(166, 149, 93)';
+              ctx.fillRect(165,171,100,23);
+
+              ctx.fillStyle='rgb(207, 140, 160)';
+              ctx.fillRect(260,25,20,250);
+          }
+      }
+      
+      </script>
+
+<style>
+
+    #tutorial{
+            margin-left: 200PX;
+            margin-top: 100PX;
+            border: 3px solid gray;
+            background-color:lightcyan;
+    }
+
+</style>
+      
+   </head>
+   <body onload="draw();">
+      <canvas id="tutorial" height="300" width="350"></canvas>
+   </body >
+
+
+</html>

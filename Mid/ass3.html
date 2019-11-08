@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html>
+	 <head>
+			<meta charset="utf-8">
+			<title>Canvas tutorial</title>
+			<script type="text/javascript">
+			function draw(){
+				var canvas = document.getElementById('tutorial');
+					
+					if(canvas.getContext){
+							var ctx=canvas.getContext('2d');
+							var gradient = ctx.createRadialGradient(85, 88, 5, 88, 90, 69);
+									 gradient.addColorStop(0, 'yellow');           
+									 gradient.addColorStop(1, '#FFC502');
+									ctx.fillStyle = gradient;
+									ctx.strokeStyle="#F5D020";
+										ctx.arc(250, 220, 170, 0,2*Math.PI);
+				
+										ctx.shadowColor = 'gray';
+										ctx.shadowBlur = 30;
+										//ctx.shadowOffsetX = 25;
+										//ctx.shadowOffsetY = 25;
+										ctx.lineWidth = 25;
+										ctx.stroke();
+										ctx.resetTransform();
+									 ctx.fill(); 
+								/* 	 ctx.beginPath();
+									 ctx.arc(250,220,177,0,2*Math.PI);
+									 ctx.strokeStyle='red';
+									 ctx.lineWidth=2;
+									 ctx.stroke();
+ */
+ 
+									 //brow
+/* 
+									 ctx.beginPath();
+							ctx.arc(300,70,20,0.1*Math.PI,1.2*Math.PI,true);
+					
+							ctx.fillStyle='black';
+							ctx.fill(); */
+
+							ctx.beginPath();
+							ctx.arc(300,90,30,1.3*Math.PI,2*Math.PI);
+							ctx.shadowColor = '#FBB034';
+										ctx.shadowBlur = 30;
+							ctx.fillStyle='GRAY';
+							//ctx.strokeStyle='#A40606';
+							//ctx.lineWidthStyle='red';
+							ctx.lineWidth = 5;
+							//ctx.stroke();
+							ctx.fill();
+
+	/* 						
+							ctx.beginPath();
+							ctx.arc(200,115,15,0.9*Math.PI,1.8*Math.PI);
+							ctx.fillStyle='black';
+							ctx.fill(); */
+
+							ctx.beginPath();
+							ctx.arc(190,95,30,1*Math.PI,1.7*Math.PI);
+							ctx.fillStyle='GRAY';
+							
+							ctx.lineWidth = 5;
+							//ctx.stroke();
+							ctx.fill();
+
+
+
+//eye left
+
+							//ctx.save();
+							// Transform
+							 ctx.translate(190, 155);
+
+							ctx.rotate( Math.PI /6);
+						 
+						 ctx.scale(0.90, 1);
+							ctx.beginPath();
+							ctx.arc(0,0,50,0,2*Math.PI);
+							ctx.strokeStyle="black";
+							ctx.fillStyle='#f7f5f6';
+							ctx.lineWidth = 10;
+							 ctx.stroke();
+								ctx.fill();
+							ctx.resetTransform();
+		//eye right					
+						 ctx.translate(300, 155);
+
+						 ctx.rotate(Math.PI /-8);
+					 
+						ctx.scale(0.90, 1);
+					ctx.beginPath();
+						// ctx.rotate((Math.PI / 180));
+						ctx.arc(0,0,50,0,2*Math.PI);
+					ctx.strokeStyle="black";
+				ctx.fillStyle='#f7f5f6';
+					ctx.lineWidth = 10;
+
+					ctx.stroke();
+						ctx.fill();
+						ctx.resetTransform();
+		//eye middle
+					// Transform
+			ctx.translate(190, 160);
+
+			ctx.rotate( Math.PI /6);
+
+			ctx.scale(0.80, 1);
+			ctx.beginPath();
+			ctx.arc(0,0,25,0,2*Math.PI);
+			ctx.shadowColor = 'skyblue';
+			ctx.shadowBlur = 30;
+			ctx.strokeStyle="#0075b3";
+			ctx.fillStyle='black';
+			ctx.lineWidth = 30;
+			ctx.stroke();
+				ctx.fill();
+			ctx.resetTransform();
+
+			ctx.translate(300, 160);
+
+			ctx.rotate(Math.PI /-8);
+
+					ctx.scale(0.80, 1);
+					ctx.beginPath();
+					ctx.arc(0,0,25,0,2*Math.PI);
+							ctx.strokeStyle="#0075b3";
+					ctx.fillStyle='black';
+							ctx.lineWidth = 30;
+
+					ctx.stroke();
+						ctx.fill();
+						ctx.resetTransform();
+//white right eye
+						ctx.beginPath();
+						ctx.arc(320,170,6,0,2*Math.PI);
+						ctx.fillStyle='white';
+						ctx.fill();
+
+						
+						ctx.beginPath();
+						ctx.arc(280,155,7,0,2*Math.PI);
+						ctx.fillStyle='white';
+						ctx.fill();
+//left eye
+						ctx.beginPath();
+						ctx.arc(202,175,7,0,2*Math.PI);
+						ctx.fillStyle='white';
+						ctx.fill();
+
+						
+						ctx.beginPath();
+						ctx.arc(180,145,7,0,2*Math.PI);
+						ctx.fillStyle='white';
+						ctx.fill();
+//eye down
+                  /*  
+					ctx.beginPath();
+					ctx.arc(180,240,50,1.2*Math.PI,1.8*Math.PI);
+					ctx.fillStyle='#FFC502';
+					ctx.strokeStyle='#A40606';
+					ctx.lineWidth = 2;
+					ctx.stroke();
+					ctx.fill(); */
+
+					ctx.translate(160, 230);
+
+                     ctx.rotate(Math.PI /8);
+
+					ctx.scale(0.90, 1);
+					ctx.beginPath();
+					ctx.arc(0,0,45,1.2*Math.PI,1.8*Math.PI);
+							ctx.strokeStyle="red";
+					ctx.fillStyle='#FFC502';
+							ctx.lineWidth = 3;
+
+					ctx.stroke();
+			ctx.fill();
+			ctx.resetTransform();
+
+
+					ctx.beginPath();
+					ctx.arc(335,225,40,1*Math.PI,1.7*Math.PI);
+					ctx.fillStyle='#FFC502';
+					ctx.strokeStyle='#A40606';
+					//ctx.lineWidthStyle='red';
+					ctx.lineWidth = 2;
+					ctx.stroke();
+					ctx.fill();
+
+/* 									ctx.beginPath();
+					ctx.arc(245,100,170,0.35*Math.PI,0.6*Math.PI);
+					//ctx.fillStyle='#FFC502';
+					ctx.strokeStyle='#A40606';
+					//ctx.lineWidthStyle='white';
+					//ctx.lineWidth = 10;
+					ctx.stroke();
+					//ctx.fill();
+
+					ctx.beginPath();
+					ctx.arc(250,186,100,0.25*Math.PI,0.7*Math.PI);
+					//ctx.fillStyle='#FFC502';
+					ctx.strokeStyle='white';
+					ctx.lineWidthStyle='white';
+					ctx.lineWidth = 10;
+					ctx.stroke();
+					//ctx.fill(); */
+
+					ctx.beginPath();
+					ctx.arc(250,220,120,0,1.0*Math.PI);
+					ctx.moveTo(370,230);
+					ctx.ellipse(250,220,120,40,0,0,Math.PI);
+					ctx.lineWidth=2;
+					//ctx.fillStyle='white';
+					ctx.strokeStyle='#e35d6a';
+					ctx.stroke();
+					//ctx.fill();
+
+				/* 	ctx.beginPath();
+					ctx.fillStyle='white';
+                    ctx.fillRect(230,260,20,25);
+					ctx.strokeStyle='white';
+					ctx.stroke(); */
+
+
+                //teeth
+
+				ctx.translate(235, 260);
+
+			ctx.rotate( Math.PI /45);
+
+			ctx.scale(0.50, 1);
+			ctx.beginPath();
+			ctx.arc(0,0,35,0,1*Math.PI);
+			ctx.shadowColor = 'white';
+			ctx.shadowBlur = 50;
+            ctx.strokeStyle='gray';
+			ctx.fillStyle="white";
+		    ctx.lineWidth=5;
+			ctx.stroke();
+				ctx.fill();
+			ctx.resetTransform();
+
+			
+			ctx.translate(200, 258);
+
+			ctx.rotate( Math.PI /15);
+
+			ctx.scale(0.50, 1);
+			ctx.beginPath();
+			ctx.arc(0,0,32,0,1*Math.PI);
+			ctx.strokeStyle='gray';
+			ctx.fillStyle="white";
+			ctx.lineWidth=5;
+			ctx.stroke();
+				ctx.fill();
+			ctx.resetTransform();
+
+             
+			ctx.translate(170, 250);
+
+			ctx.rotate( Math.PI /15);
+
+			ctx.scale(0.50, 1);
+			ctx.beginPath();
+			ctx.arc(0,0,25,0,1*Math.PI);
+			ctx.strokeStyle='gray';
+			ctx.fillStyle="white";
+			ctx.lineWidth=5;
+			ctx.stroke();
+				ctx.fill();
+			ctx.resetTransform();
+
+			ctx.translate(150, 242);
+
+			ctx.rotate( Math.PI /5);
+
+			ctx.scale(0.50, 1);
+			ctx.beginPath();
+			ctx.arc(0,0,15,0,1*Math.PI);
+			ctx.strokeStyle='gray';
+			ctx.fillStyle="white";
+			ctx.lineWidth=5;
+			ctx.stroke();
+				ctx.fill();
+			ctx.resetTransform();
+
+
+			ctx.translate(270, 260);
+
+ctx.rotate( Math.PI /-45);
+
+ctx.scale(0.50, 1);
+ctx.beginPath();
+ctx.arc(0,0,35,0,1*Math.PI);
+ctx.strokeStyle='gray';
+ctx.fillStyle="white";
+ctx.lineWidth=5;
+ctx.stroke();
+	ctx.fill();
+ctx.resetTransform();
+
+
+ctx.translate(305, 256);
+
+ctx.rotate( Math.PI /-15);
+
+ctx.scale(0.50, 1);
+ctx.beginPath();
+ctx.arc(0,0,32,0,1*Math.PI);
+ctx.strokeStyle='gray';
+ctx.fillStyle="white";
+ctx.lineWidth=5;
+ctx.stroke();
+	ctx.fill();
+ctx.resetTransform();
+
+ 
+ctx.translate(335, 250);
+
+ctx.rotate( Math.PI /-10);
+
+ctx.scale(0.50, 1);
+ctx.beginPath();
+ctx.arc(0,0,25,0,1*Math.PI);
+ctx.strokeStyle='gray';
+ctx.fillStyle="white";
+ctx.lineWidth=5;
+ctx.stroke();
+	ctx.fill();
+ctx.resetTransform();
+
+ctx.translate(355, 240);
+
+ctx.rotate( Math.PI /-5);
+
+ctx.scale(0.50, 1);
+ctx.beginPath();
+ctx.arc(0,0,15,0,1*Math.PI);
+ctx.strokeStyle='gray';
+ctx.fillStyle="white";
+ctx.lineWidth=5;
+ctx.stroke();
+	ctx.fill();
+ctx.resetTransform();
+
+
+/* 
+ctx.beginPath();
+ctx.arc(250,335,30,1*Math.PI,2*Math.PI);
+ctx.fillStyle='#ff5e62';
+//ctx.strokeStyle='#A40606';
+//ctx.lineWidthStyle='red';
+ctx.lineWidth = 5;
+//ctx.stroke();
+ctx.fill(); */
+							
+
+					}
+			}
+			
+			
+			</script>
+		 <style>
+
+#tutorial{
+						margin-left: 50PX;
+						margin-top: 50PX;
+						border: 2px solid gray;
+						background-color: antiquewhite;
+				 
+		}
+		 
+		 </style>
+
+			
+	 </head>
+	 <body onload="draw();">
+			<canvas id="tutorial" height="500" width="500"></canvas>
+	 </body >
+
+
+</html>

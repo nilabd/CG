@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+
+<html>
+   <head>
+   
+   
+      
+      <script type = "text/javascript">
+         function drawShape() {
+            
+            // Get the canvas element using the DOM
+            var canvas = document.getElementById('mycanvas');
+
+            // Make sure we don't execute when canvas isn't supported
+            if (canvas.getContext) {
+               
+               // use getContext to use the canvas for drawing
+               var ctx = canvas.getContext('2d');
+
+               // Draw shapes
+            
+               ctx.fillRect(55,45,10,10);
+              ctx.fillRect(50,50,10,10);
+              ctx.fillRect(45,55,10,10);
+              ctx.fillRect(40,60,10,10);
+              ctx.fillRect(35,65,10,10);
+              
+              
+            }
+         }
+      </script>
+   </head>
+   
+   <body id = "test" onload = "drawShape();">
+      <canvas id = "mycanvas"></canvas>
+   </body>
+	
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <meta charset="utf-8"/>
+            <title>Circle</title>
+            <style>
+                canvas{
+                    border:2px solid red;
+                    background-color: antiquewhite;
+
+                }               
+            </style>
+            <script>
+                
+                var color=0;
+                var r=100;
+                function setPixel(x,y){
+                    var canvas= document.getElementById('canvas');
+                    if(canvas.getContext)
+                    {
+                        
+                    var ctx=canvas.getContext('2d');
+                    ctx.fillStyle = 'hsl(' + color++ + ',90%,40%)';
+                    //ctx.fillStyle="red";
+                    ctx.fillRect(x,y,3,3);
+                    
+                   
+                    }
+                } 
+                function draw(){
+                
+                        var x=0,y=r,p=1-r;
+                        
+                        while(x<=y){
+                            setPixel(x+200,y+200);
+                            setPixel(y+200,x+200);
+                            setPixel(-y+200,x+200);
+                            setPixel(-x+200,y+200);
+                            setPixel(-x+200,-y+200);
+                            setPixel(-y+200,-x+200);
+                            setPixel(y+200,-x+200);
+                            setPixel(x+200,-y+200);
+
+                            //setPixel(x,y);
+
+                            if(p<0)
+                                p=p+(2*x)+3;
+                                else
+                                {
+                                    p=p+2*(x-y)+5;
+                                    y--;
+                                }
+                               /*  ctx.fillStyle = "red";
+                         
+                            ctx.fillRect( x, y, 3, 3 ); */
+
+                                
+                                x++;
+                            }
+                         
+                        }
+
+                    
+                            
+                        
+                        
+                    
+
+                
+            </script>
+        </head>
+        <body onload="draw()">
+            <canvas id='canvas' height='500' width='500'></canvas>
+        </body>
+    </html>

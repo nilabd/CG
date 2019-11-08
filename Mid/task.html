@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <title>Canvas tutorial</title>
+      <script type="text/javascript">
+      function draw(){
+        var canvas = document.getElementById('tutorial');
+          
+          if(canvas.getContext){
+              var ctx=canvas.getContext('2d');
+
+              ctx.fillStyle='rgb(116, 153, 176)';
+              ctx.fillRect(50,35,45,5);
+
+                 //left
+              for(var i=30;i<=40;){
+                  for(var j=50;j>=10;){
+              ctx.fillStyle='rgb(116, 153, 176)';
+              ctx.fillRect(i,j,5,5);
+              i=i+1;
+              j=j-1;
+               }
+               }
+                //middle1
+               for(var i=70;i<=80;){
+                  for(var j=10;j<=50;){
+              ctx.fillStyle='rgb(116, 153, 176)';
+              ctx.fillRect(i,j,5,5);
+              i=i+1;
+              j=j+1;
+               }
+               } 
+            //B
+            ctx.fillStyle='rgb(116, 153, 176)';
+              ctx.fillRect(125,10,5,45);
+               for(var i=125;i<=145;)
+               {
+                  for(var j=10;j<=12;){
+                     ctx.fillStyle='rgb(116, 153, 176)';
+              ctx.fillRect(i,j,10,5);
+              i=i+10;
+              j=j+1;
+                  }
+               }
+             /*  ctx.fillStyle='rgb(116, 153, 176)';
+              ctx.fillRect(125,10,10,5);
+              ctx.fillStyle='rgb(116, 153, 176)';
+              ctx.fillRect(135,11,10,5);
+              ctx.fillStyle='rgb(116, 153, 176)';
+              ctx.fillRect(145,12,10,5); */
+              ctx.fillStyle='rgb(116, 153, 176)';
+              ctx.fillRect(150,13,5,40);
+              ctx.fillStyle='rgb(116, 153, 176)';
+              ctx.fillRect(125,30,25,5);
+               
+              for(var i=145;i>=125;)
+               {
+                  for(var j=50;j<=52;){
+                     ctx.fillStyle='rgb(116, 153, 176)';
+              ctx.fillRect(i,j,10,5);
+              i=i-10;
+              j=j+1;
+                  }
+               }
+
+               //C
+
+               ctx.fillStyle='rgb(116, 153, 176)';
+              ctx.fillRect(195,20,10,10);
+              ctx.fillStyle='rgb(116, 153, 176)';
+              ctx.fillRect(191,16,10,5);
+              ctx.fillStyle='rgb(116, 153, 176)';
+              ctx.fillRect(180,12,18,5);
+
+
+              for(var i=175;i>=169;)
+               {
+                  for(var j=14;j<=20;){
+                     ctx.fillStyle='rgb(116, 153, 176)';
+              ctx.fillRect(i,j,5,5);
+              i=i-2;
+              j=j+2;
+                  }
+               }
+              /* ctx.fillStyle='rgb(116, 153, 176)';
+              ctx.fillRect(175,14,5,5);
+              ctx.fillStyle='rgb(116, 153, 176)';
+              ctx.fillRect(173,16,5,5);
+              ctx.fillStyle='rgb(116, 153, 176)';
+              ctx.fillRect(171,18,5,5);
+              ctx.fillStyle='rgb(116, 153, 176)';
+              ctx.fillRect(169,20,5,5); */
+
+              ctx.fillStyle='rgb(116, 153, 176)';
+              ctx.fillRect(169,20,5,35);
+
+              for(var i=170;i<=173;)
+               {
+                  for(var j=52;j<=55;){
+                     ctx.fillStyle='rgb(116, 153, 176)';
+              ctx.fillRect(i,j,5,5);
+              i=i+1;
+              j=j+1;
+                  }
+               }
+
+             /*  ctx.fillStyle='rgb(116, 153, 176)';
+              ctx.fillRect(170,52,5,5);
+              ctx.fillStyle='rgb(116, 153, 176)';
+              ctx.fillRect(171,53,5,5);
+              ctx.fillStyle='rgb(116, 153, 176)';
+              ctx.fillRect(172,54,5,5);
+              ctx.fillStyle='rgb(116, 153, 176)';
+              ctx.fillRect(173,55,5,5); */
+              ctx.fillStyle='rgb(116, 153, 176)';
+              ctx.fillRect(173,55,30,5);
+              
+
+
+          }
+      }
+      
+      </script>
+
+<style>
+
+    #tutorial{
+            margin-left: 200PX;
+            margin-top: 100PX;
+            border: 2px solid gray;
+    }
+
+</style>
+      
+   </head>
+   <body onload="draw();">
+      <canvas id="tutorial" height="1000" width="1000"></canvas>
+   </body >
+
+
+</html>

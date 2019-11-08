@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <title>Canvas tutorial</title>
+      <script type="text/javascript">
+      function draw(){
+        var canvas = document.getElementById("tutorial");
+var ctx = canvas.getContext("2d");
+ctx.lineCap = "round";
+
+// variable to hold how many frames have elapsed in the animation
+var t = 1;
+var colorArray = [
+    '#2C3E50',
+    '#E74C3C',
+    '#3498DB',
+    '#2980B9',
+]
+var color = colorArray[Math.floor(Math.random() * colorArray.length)];
+// define the path to plot
+var vertices = [];
+vertices.push({
+    x: 300,
+    y: 300
+});
+vertices.push({
+    x: 400,
+    y: 290
+});
+vertices.push({
+    x: 440,
+    y: 180
+});
+vertices.push({
+    x: 480,
+    y: 290
+});
+vertices.push({
+    x: 580,
+    y: 300
+});
+
+vertices.push({
+    x: 510,
+    y: 360
+});
+
+vertices.push({
+    x: 560,
+    y: 480
+});
+
+vertices.push({
+    x: 440,
+    y: 410
+});
+
+vertices.push({
+    x: 340,
+    y: 480
+});
+
+vertices.push({
+    x: 380,
+    y: 360
+});
+vertices.push({
+    x: 300,
+    y: 300
+});
+
+
+ctx.moveTo(440, 355);
+ 
+ctx.lineTo(440, 180);
+ctx.lineTo(480, 290);
+
+ctx.fillStyle= color;
+ctx.fill();
+
+
+ctx.moveTo(440, 355);
+ 
+ctx.lineTo(580, 298);
+ctx.lineTo(510, 360);
+ctx.fillStyle= color;
+
+ctx.fill();
+
+
+ctx.moveTo(440, 355);
+ 
+ctx.lineTo(562, 480);
+ctx.lineTo(440, 410);
+
+
+ctx.fill();
+
+
+ctx.moveTo(440, 355);
+ 
+ctx.lineTo(338, 480);
+ctx.lineTo(380, 360);
+
+
+ctx.fill();
+
+
+ctx.moveTo(440, 355);
+ 
+ctx.lineTo(300, 300);
+ctx.lineTo(400, 290);
+
+
+ctx.fill();
+
+// draw the complete line
+ctx.lineWidth = 1;
+// tell canvas you are beginning a new path
+ctx.beginPath();
+// draw the path with moveTo and multiple lineTo's
+ctx.moveTo(300, 300);
+    
+    ctx.lineTo(400, 290);
+    ctx.lineTo(440, 180);
+    ctx.lineTo(480, 290);
+    ctx.lineTo(580, 300);
+    ctx.lineTo(510, 360);
+    ctx.lineTo(560, 480);
+    ctx.lineTo(440, 410);
+    ctx.lineTo(340, 480);
+    ctx.lineTo(380, 360);
+    ctx.lineTo(300, 300);
+// stroke the path
+ctx.stroke();
+
+
+// set some style
+ctx.lineWidth = 5;
+ctx.strokeStyle = "black";
+// calculate incremental points along the path
+var points = calcWaypoints(vertices);
+// extend the line from start to finish with animation
+animate(points);
+
+
+// calc waypoints traveling along vertices
+function calcWaypoints(vertices) {
+    var waypoints = [];
+    for (var i = 1; i < vertices.length; i++) {
+        var pt0 = vertices[i - 1];
+        var pt1 = vertices[i];
+        var dx = pt1.x - pt0.x;
+        var dy = pt1.y - pt0.y;
+        for (var j = 0; j < 40; j++) {
+            var x = pt0.x + dx * j / 40;
+            var y = pt0.y + dy * j / 40;
+            waypoints.push({
+                x: x,
+                y: y
+            });
+        }
+    }
+    return (waypoints);
+}
+
+
+
+
+
+function animate() {
+    if (t < points.length - 1) {
+        requestAnimationFrame(animate);
+    }
+    // draw a line segment from the last waypoint
+    // to the current waypoint
+    ctx.beginPath();
+    ctx.moveTo(points[t - 1].x, points[t - 1].y);
+    ctx.lineTo(points[t].x, points[t].y);
+    ctx.stroke();
+    // increment "t" to get the next waypoint
+    t++;
+}
+      }
+</script>
+
+      
+   </head>
+   <body onload="draw();">
+      <canvas id="tutorial" height="800" width="850"></canvas>
+   </body >
+
+
+</html>

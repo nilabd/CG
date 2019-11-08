@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <title>Canvas tutorial</title>
+      <script type="text/javascript">
+      function draw(){
+        var canvas = document.getElementById('tutorial');
+          
+          if(canvas.getContext){
+              var ctx=canvas.getContext('2d');
+
+
+      
+         ctx.beginPath();
+              ctx.moveTo(430, 40);
+              ctx.lineTo(310, 270);
+              ctx.lineTo(50, 320);
+              ctx.lineTo(240, 480);
+              ctx.lineTo(200, 740);
+              ctx.lineTo(430, 600);
+              ctx.lineTo(650, 740);
+              ctx.lineTo(610, 480);
+              ctx.lineTo(800, 320);
+              ctx.lineTo(540, 270);
+              
+             
+              ctx.closePath();
+              ctx.fill(); 
+              //ctx.stroke(); 
+              
+//middle
+              ctx.beginPath();
+              ctx.moveTo(430, 100);
+              ctx.lineTo(330, 300);
+              ctx.lineTo(430, 420);
+              ctx.fillStyle='white'; 
+             
+              ctx.closePath();
+              //ctx.stroke(); 
+              ctx.fill(); 
+
+      //left1
+
+              ctx.beginPath();
+              ctx.moveTo(110,340);
+              ctx.lineTo(270,470);
+              ctx.lineTo(430, 420);
+
+             
+              ctx.closePath();
+              //ctx.stroke(); 
+              ctx.fill(); 
+//left2
+              ctx.beginPath();
+              ctx.moveTo(240, 690);
+              ctx.lineTo(430, 570);
+              ctx.lineTo(430, 420);
+
+             
+              ctx.closePath();
+              //ctx.stroke(); 
+              ctx.fill(); 
+
+        //right1      
+
+              ctx.beginPath();
+              ctx.moveTo(620, 690);
+              ctx.lineTo(580, 470);
+              ctx.lineTo(430, 420);
+
+              ctx.closePath();
+              //ctx.stroke(); 
+              ctx.fill(); 
+
+              //right2     
+
+              ctx.beginPath();
+              ctx.moveTo(740, 330);
+              ctx.lineTo(520, 290);
+              ctx.lineTo(430, 420);
+
+              ctx.closePath();
+              //ctx.stroke(); 
+              ctx.fill(); 
+          }
+      }
+      
+      </script>
+     <style>
+
+#tutorial{
+            margin-left: 50PX;
+            margin-top: 50PX;
+            border: 2px solid gray;
+         
+    }
+     
+     </style>
+
+      
+   </head>
+   <body onload="draw();">
+      <canvas id="tutorial" height="800" width="850"></canvas>
+   </body >
+
+
+</html>
